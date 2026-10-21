@@ -1,0 +1,8 @@
+.env
+perfil_finnegans/
+recibos/
+*.csv
+historial.json
+debug_*
+venv/
+__pycache__/
