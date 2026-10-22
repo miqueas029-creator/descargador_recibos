@@ -10,7 +10,8 @@ Automatización en Python que descarga recibos de donaciones mensuales desde un 
 4. Cruza ambas tablas con pandas, por ID de organización y monto.
 5. Descarga el PDF de cada recibo que coincide.
 6. Guarda un historial para no descargar dos veces el mismo recibo.
-7. Genera un listado de los donantes sin coincidencia, indicando el motivo.
+7. Mueve cada PDF a la carpeta del donante correspondiente.
+8. Genera un listado de los donantes sin coincidencia, indicando el motivo.
 
 ## Tecnologías
 
@@ -24,7 +25,9 @@ Python, Playwright, pandas, python-dotenv.
 
 ## Estado del proyecto
 
-En desarrollo. Falta terminar el módulo que mueve los PDF descargados a la carpeta de cada donante.
+## Estado del proyecto
+
+Terminado y funcional. Descarga los recibos, los guarda en PDF y los mueve automáticamente a la carpeta de cada donante.
 
 ## Nota
 

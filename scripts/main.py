@@ -15,27 +15,28 @@ from src.preparar_df import mergeador
 from src.descargar_recibos import descargar_recibo
 from src.mover_archivos import mover_archivos
 
-p, page, context = login()
+# p, page, context = login()
 
-frame = libro_mayor(page)
+# frame = libro_mayor(page)
 
-recibos = obtener_todos_los_recibos(frame)
+# recibos = obtener_todos_los_recibos(frame)
 
-coincidencias = mergeador(recibos) #mergeo con los donantes que tenemos y el monto que donan
-historial = cargar_historial()
+# coincidencias = mergeador(recibos) #mergeo con los donantes que tenemos y el monto que donan
+# historial = cargar_historial()
 
-for _, recibo in coincidencias.iterrows():
+# for _, recibo in coincidencias.iterrows():
 
-    transaccionid = str(recibo["transaccionid"])
+#     transaccionid = str(recibo["transaccionid"])
 
-    if transaccionid in historial:
-        print("Ya descargado, salteo:", recibo["Donante"])
-        continue
+#     if transaccionid in historial:
+#         print("Ya descargado, salteo:", recibo["Donante"])
+#         continue
 
-    descargar_recibo(page, context, recibo)
-    guardar_estado(historial, transaccionid, "descargado")
+#     descargar_recibo(page, context, recibo)
+#     guardar_estado(historial, transaccionid, "descargado")
     
-context.close()
-p.stop()
+# context.close()
+# p.stop()
 
-# mover_archivos
+mover_archivos()
+

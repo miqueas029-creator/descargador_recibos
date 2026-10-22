@@ -6,3 +6,4 @@ historial.json
 debug_*
 venv/
 __pycache__/
+.vscode/
